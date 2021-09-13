@@ -7,16 +7,16 @@
 body {
   height: 100vh;
   display: flex;
-  background: blueviolet;
+  background: green;
 }
 
 .board {
-  width: 1000px;
-  height: 1000px;
+  width: 640px;
+  height: 650px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  perspective: 1000px;
+  perspective: 1000px; 
 }
 
 .card {
@@ -27,7 +27,6 @@ body {
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform .5s;
-  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
 }
 
 .card:active {
@@ -35,7 +34,7 @@ body {
   transition: transform .2s;
 }
 
-.card.flip {
+.card.rotate {
   transform: rotateY(180deg);
 }
 
@@ -45,9 +44,10 @@ body {
   height: 100%;
   padding: 20px;
   position: absolute;
-  border-radius: 5px;
+  border-radius: 5px; 
   background: red;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .front-face {
