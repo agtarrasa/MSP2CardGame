@@ -4,7 +4,7 @@ const board = document.querySelectorAll('.card');
 
 
 function RotateCard() {
-var paisElegido='',numeroCarta=0,opcionesCarta='';    
+var countryElegido='',numeroCarta=0,opcionesCarta='';    
 var opcionesTmp=[],indicesRandom=[];
     
    
@@ -66,6 +66,15 @@ function ZeroToRandom(){
         card.find('input')[i].checked=false;
         }
         }
+        function fitSaotome(country){
+
+            if(country.indexOf('Sao')!=-1){
+            
+                return 'Sao_Tome_<br>And_Prince';
+            }else{
+            
+                return country;}
+            }
 
 
 
