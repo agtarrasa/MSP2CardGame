@@ -88,6 +88,19 @@ function ZeroToRandom(){
                 }
                 return positions;
                 }
+                function RandomPositions(){
+                    var i=0;
+                    var positions=[];
+                    var RandomNumber=0;
+                    while(positions.length!=12){
+                    RandomNumber=Math.floor(Math.random()*12);//0 a 11.99
+                    while(positions.includes(RandomNumber) ){
+                    RandomNumber=Math.floor(Math.random()*12);//0 a 11.99
+                    }
+                    positions.push(RandomNumber);
+                    }
+                    return positions;
+                    }
 
 
 
