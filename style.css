@@ -53,3 +53,30 @@ body {
 .front-face {
   transform: rotateY(180deg);
 }
+div#flagOptions {
+  visibility: hidden;
+  width: 0px;
+}
+/*color country options*/
+label {
+  color: darkorange;
+  font-family: laFuente2;
+  font-size: 13pt;
+font-weight: bold;
+}
+
+div.correctNotCorrect{
+  height: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: blue;
+  font-family: laFuente2;
+}
+
+
+@font-face {
+  font-family: Font2;
+  src: url('./font/SippinOnSunshine.otf');
+}
+
