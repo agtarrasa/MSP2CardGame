@@ -10,6 +10,13 @@ var opcionesTmp=[],indicesRandom=[];
    
 }
 
+function isRotated(){
+var cartasRotadas=
+ $('div[class="card rotate"]').length;
+ return cartasRotadas;   
+
+}
+
 
 
 
