@@ -29,6 +29,34 @@ function ceroA2Azar(){
   }
   return positions;
   }
+  function addOptions(CardNumber){
+
+    var htmlClon='';
+    
+    var card=$('.card').eq(CardNumber);
+    if($('.card').eq(CardNumber).find('div').length==0){
+    
+    var child=card.find('img').eq(0);
+    var flag=hijo.attr('src');
+    child.css('visibility','hidden');
+    el=$('#banderaOpciones');
+    
+    el=el.clone();
+    
+    el.attr('class','front-face');
+    el.attr('id','opcionesCarta-'+CardNumber);
+    el.css('background-image','url('+flag+')');
+    el.css('background-repeat','no repeat');
+    el.css('height','205px');
+    el.css('background-size','100% 100%');
+    el.css('display','flex');
+    el.css('flex-direction','column');
+    el.css('justify-content','space-between');
+    console.log(htmlClon);
+    console.log('hola '+el.get(0).outerHTML);
+    carta.append(el.get(0).outerHTML);
+    }
+    }
 
 
 
