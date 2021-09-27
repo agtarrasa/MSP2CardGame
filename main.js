@@ -16,7 +16,7 @@ var RotatedCards=
  return RotatedCards;   
 
 }
-function ceroA2Azar(){
+function ZeroToRandom(){
   var i=0;
   var positions=[];
   var RandomNumber=0;
@@ -37,9 +37,9 @@ function ceroA2Azar(){
     if($('.card').eq(CardNumber).find('div').length==0){
     
     var child=card.find('img').eq(0);
-    var flag=hijo.attr('src');
+    var flag=child.attr('src');
     child.css('visibility','hidden');
-    el=$('#banderaOpciones');
+    el=$('#flagOptions');
     
     el=el.clone();
     
@@ -54,9 +54,18 @@ function ceroA2Azar(){
     el.css('justify-content','space-between');
     console.log(htmlClon);
     console.log('hola '+el.get(0).outerHTML);
-    carta.append(el.get(0).outerHTML);
+    card.append(el.get(0).outerHTML);
     }
     }
+    function CleanRadios(CardNumber){
+
+        var card=$('#'+'optionscard-'+CardNumber);
+        var options=card.find('input').length;
+        var i=0;
+        for(i=0;i<options;i++){
+        card.find('input')[i].checked=false;
+        }
+        }
 
 
 
